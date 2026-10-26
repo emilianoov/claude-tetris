@@ -68,7 +68,7 @@ jobs:
                `gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --edit-last --create-if-none --body "<contenido>"`
                Si el comentario ya existe, se actualiza en lugar de crear uno nuevo.
 
-            El comentario debe estar en español, empezar con la línea `<!-- claude-issue-triage -->` y contener estas secciones:
+            El comentario debe estar en español, redactado en Markdown compatible con GitHub (GitHub Flavored Markdown: encabezados `##`, listas, tablas, bloques de código con triple acento grave y lenguaje, `código en línea`, negritas, etc.) para que se renderice correctamente en el issue, empezar con la línea `<!-- claude-issue-triage -->` y contener estas secciones:
             ## Resumen
             ## Clasificación (labels asignados y por qué)
             ## Análisis / causa probable (con referencias `archivo:línea` y nombres de función, p. ej. `collide`, `tryRotate`, `clearLines`, `loop`)
